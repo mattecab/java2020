@@ -32,15 +32,14 @@ public class Main {
  
     public static void add(Scanner input, BirdDatabase db) {    
     	System.out.print("name: ");
-    	db.addName(input.(nextLine(),);
-    	System.out.print("Latin name: ");
-    	db.addName(input.nextLine());
+    	db.addName(input.nextLine(),input.nextLine());
+    	
 
     	}
     public static void observation(Scanner input, BirdDatabase db) { 
     	System.out.println("what was observed");
-    	String c=input.nextLine();
-    	db.count(c,0);}
+    	String observed=input.nextLine();
+    	db.count(observed);}
  
 	
 	public static void show(Scanner input, BirdDatabase db) {
@@ -48,7 +47,9 @@ public class Main {
     	String same=input.nextLine();
     	db.compare(same);}
  
-    public static void statistics(Scanner input, BirdDatabase db) {  }
+    public static void statistics(Scanner input, BirdDatabase db) { 
+    	db.print();
+    }
   }
 
 

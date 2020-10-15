@@ -1,8 +1,9 @@
 
-public class Bird {
+public class Bird  {
 private String name;
 private String latiname;
 private int obser;
+
 
 public String getName() {
 	return name;
@@ -12,16 +13,18 @@ public void setName(String name) {
 	this.name = name;
 }
 
-public Bird() {
+public Bird(String name,String latiname) {
 	this.name=name;
 	this.latiname=latiname;
 	this.obser=obser;
 }
 
-public boolean contains(String same) {
-	return true;
+public boolean contains(String observed) {if (observed.equals(name)) {
+	return true;}return false;
 }
-
+public boolean contai(String same) {if (same.equals(name)) {
+	return true;}return false;
+}
 public int getObser() {
 	return obser;
 }
