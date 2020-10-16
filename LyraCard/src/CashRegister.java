@@ -56,7 +56,6 @@ public boolean payGourmet(LyyraCard card) {
 	double gourmet =4;
 if( card.balance() >= gourmet) {
 		this.gourmetSold++;
-		card.setBalance(); = card.getBalance() - gourmet;
         return true;}
 else {return false ;}}
     // the price of the gourmet lunch is 4.00 euros
@@ -68,6 +67,7 @@ else {return false ;}}
 
 
 public void loadMoneyToCard(LyyraCard card, double sum) {
+ this.cashInRegister+= sum;
 //
 
 	// card.balance= card.balance+sum;
