@@ -1,7 +1,6 @@
 
 import java.util.Scanner;
 
-import jdk.internal.misc.FileSystemOption;
 
 public class Main { 
     
@@ -9,7 +8,7 @@ public class Main {
     
         Scanner scanner = new Scanner(System.in);
         BirdDatabase db = new BirdDatabase();
- 
+        BirdDatabase alredy = new BirdDatabase();
         while (true) {
             String command = ask(scanner, "Option?");
  
@@ -48,10 +47,10 @@ public class Main {
     public static void observation(Scanner input, BirdDatabase db) { 
     	System.out.println("what was observed");
     	String observed=input.nextLine();
-    	db.visto(observed);
-    	if  (!db.count(observed)){System.out.println("not founded");}
-    		
-    	}
+    		if(db.condition(observed)){db.visto(observed);}
+    		else {System.out.println("is not existing on the list!");}}
+    	
+
  
 	
 	public static void show(Scanner input, BirdDatabase db) {

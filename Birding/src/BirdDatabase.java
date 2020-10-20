@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import jdk.internal.misc.FileSystemOption;
-
 public class BirdDatabase {
   private ArrayList<Bird> Birds;
   
@@ -30,9 +28,12 @@ public class BirdDatabase {
 	  {one.setObser(one.getObser() + 1);}
 	 	  }*/
 			  public void visto(String observed) {
-				  for (Bird one : Birds)
+				
+			  for (Bird one : Birds)
 		  {if (one.getName().equals(observed))
-		  {one.setObser(one.getObser() + 1);}}}
+		  {one.setObser(one.getObser() + 1);
+		 break;}}} 
+		
 			  
 	  
 			  public void compare(String same) {
@@ -46,10 +47,11 @@ public class BirdDatabase {
 			
 		}
 	  }
-	  public boolean count(String observed) {
-			  if (Birds.contains(observed)) {return true;}
-			  else {return false;}	 }
-	  }
+	  public boolean condition(String observed) {
+			for   (Bird one:Birds) {
+		  if ((one.getName()).equals(observed)) {return true;}	 }
+			return false;}}
+	  
 
 	  
 			
