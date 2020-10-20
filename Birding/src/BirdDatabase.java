@@ -46,7 +46,7 @@ public class BirdDatabase {
 			
 		}
 	  }
-	  public boolean count(String observed) {
+	  public boolean existe(String observed) {
 			  if (Birds.contains(observed)) {return true;}
 			  else {return false;}	 }
 	  }

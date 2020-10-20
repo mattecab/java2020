@@ -49,7 +49,7 @@ public class Main {
     	System.out.println("what was observed");
     	String observed=input.nextLine();
     	db.visto(observed);
-    	if  (!db.count(observed)){System.out.println("not founded");}
+    	if  (!db.existe(observed)){System.out.println("not founded");}
     		
     	}
  
